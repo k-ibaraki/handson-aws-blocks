@@ -39,11 +39,13 @@
 💻 このリポジトリを clone した中（あるいは好きな場所）で:
 
 ```bash
-npm create @aws-blocks/blocks-app@latest mcp-chat-app
-cd mcp-chat-app
+npm create @aws-blocks/blocks-app@latest blocks-mcp-chat
+cd blocks-mcp-chat
 npm install
 npm run dev
 ```
+
+プロジェクト名（`blocks-mcp-chat`）は好きな名前に変えて構いません。ただし次の 1 点だけは守ってください。
 
 > **WARNING: プロジェクト名を `aws` で始めないでください。** プロジェクト名はそのまま CloudFormation のスタック名の種（`.blocks/config.json` の `stackId`）になり、AWS のリソースグループは「AWS」始まりの名前を予約済みとして拒否します。しかもこの罠は**本番デプロイまで到達して初めて失敗する**遅発性です。（このハンズオンのリハーサルは `aws-blocks-sample-...` という名前で見事に踏みました）
 
