@@ -206,6 +206,8 @@ cp .env.example .env   # GITHUB_PAT / GITHUB_OWNER / GITHUB_REPO を書き込む
 
 MCP 連携の確認には本物の LLM が要ります。かといって毎回フルデプロイは重い。そこで **sandbox** です——バックエンドだけ AWS に上げ、画面はローカル配信のまま、本物の Bedrock と本物の GitHub で動かす開発用環境です。
 
+> **WARNING: `npm run dev` と `npm run sandbox` を同時に起動しないでください。** どちらも同じポートでローカルサーバーを立てるため競合し、モックと実 AWS のどちらに繋がっているか分からない混乱状態になります。`npm run dev` が動いたままなら、Ctrl+C で止めてから実行してください。
+
 💻:
 
 ```bash
