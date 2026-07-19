@@ -33,6 +33,7 @@
 - AWS アカウントで **Bedrock の Claude Sonnet 4.6 のモデルアクセスが有効**なこと（Bedrock コンソール → Model access）
 - **GitHub アカウント**と、Issue を書き込んでよい実験用リポジトリ（第 3 章で使います。自分のリポジトリなら何でも構いません）
 - **（推奨）[Agent Toolkit for AWS](https://aws.amazon.com/jp/products/developer-tools/agent-toolkit-for-aws/) を導入済み**であること。エージェントに AWS Blocks や AWS 各サービスのスキル（検証済みの実装パターン集）が追加され、指示が一発で通る確率が上がります。このハンズオンの試走も導入済みの環境で実施しています
+- **（推奨）エージェントがブラウザを操作できるツール**（[Playwright MCP](https://github.com/microsoft/playwright-mcp) など）。`npm run test:e2e` 自体は追加ツール不要ですが、サインアップ〜チャット送受信のような**画面の動作確認までエージェント自身に検証させる**なら必要です。試走でもエージェントがブラウザ実証（スクリーンショット確認）に使用しています
 
 > **NOTE: 料金について。** ローカル（第 1 章）は完全モックで課金ゼロです。第 2 章以降は Bedrock の従量課金と、デプロイ中のリソース費用がかかります（個人の試用ならごく小額の範囲）。最終章の `npm run destroy` で全リソースを片付けるところまでがハンズオンです。
 
